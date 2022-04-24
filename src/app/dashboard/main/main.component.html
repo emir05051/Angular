@@ -1,0 +1,69 @@
+<div class="main">
+  <div class="first">
+    <div class="container blue">
+      <h3 style="color: white">Total Sales</h3>
+      <ngx-charts-bar-vertical
+        [view]="view"
+        [results]="saleData"
+        [scheme]="colorScheme"
+        [roundEdges]="false"
+        [barPadding]="2"
+        style="fill: #2B2B2B"
+      >
+      </ngx-charts-bar-vertical>
+    </div>
+    <div class="container light-blue">
+      <h2 style="color: white">Visits</h2>
+      <ngx-charts-line-chart
+        [view]="[430,150]"
+        [results]="multi"
+        [scheme]="colorScheme"
+      ></ngx-charts-line-chart>
+    </div>
+  </div>
+  <div class="second">
+    <div class="container green">
+      <h2 style="color: white">Total Clicks</h2>
+      <ngx-charts-line-chart
+        [view]="[430,150]"
+        [results]="multi_2"
+        [scheme]="colorScheme"
+      ></ngx-charts-line-chart>
+    </div>
+    <div class="container dark-green">
+      <h2 style="color: white">Conversion</h2>
+      <ngx-charts-line-chart
+        [view]="[430,150]"
+        [results]="multi_3"
+        [scheme]="colorScheme"
+      ></ngx-charts-line-chart>
+    </div>
+  </div>
+  <div class="third">
+    <div>
+      <button mat-raised-button color="warn" (click)="isUser = true">
+        USER
+      </button>
+      <button mat-raised-button color="warn" (click)="isUser = false">
+        Session
+      </button>
+    </div>
+    <ngx-charts-line-chart
+      [view]="[900,500]"
+      [results]="isUser ? users : sessions"
+      [scheme]="colorScheme_blue"
+      [yAxis]="true"
+      [xAxis]="true"
+    ></ngx-charts-line-chart>
+  </div>
+  <div class="fourth">
+    <ngx-charts-number-card
+      [view]="[900, 400]"
+      [scheme]="colorScheme"
+      [results]="online_users"
+      [cardColor]="cardColor"
+      [innerPadding]="0"
+    >
+    </ngx-charts-number-card>
+  </div>
+</div>

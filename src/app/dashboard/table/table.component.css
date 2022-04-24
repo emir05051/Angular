@@ -1,0 +1,10 @@
+.main{
+  height: calc(100% - 50px);
+  overflow-y: scroll;
+}
+table{
+  width: 100%;
+}
+th, td {
+  padding: 10px !important;
+}

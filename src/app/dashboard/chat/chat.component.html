@@ -1,0 +1,40 @@
+<div class="main">
+  <div class="chat">
+    <div class="chat-left">
+      <div class="chat-user" style="border-bottom: 1px solid rgba(0,0,0,.12)">
+        <img src="../../../assets/chat/1.jpg" alt="photo">
+        <mat-icon aria-hidden="false" aria-label="More">more_vert</mat-icon>
+      </div>
+      <div *ngFor="let user of usersData" class="chat-users" (click)="changeUser(user.img)" >
+        <img [src]="user.img" alt="">
+        <div>
+          <p>{{user.name}}</p>
+          <p>{{user.description}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="chat-right">
+      <div class="chat-user-online" style="border-bottom: 1px solid rgba(0,0,0,.12); padding: 7px">
+        <div class="chat-user-name" >
+          <img src="../../../assets/chat/1.jpg" alt="">
+          <div>
+            <h3 style="margin: 0">Dolores Rojas</h3>
+            <h4 style="margin: 0; color: grey">Online</h4>
+          </div>
+        </div>
+        <div style="margin-right: 10px">
+          <mat-icon aria-hidden="false" aria-label="Attach">attach_file</mat-icon>
+          <mat-icon aria-hidden="false" aria-label="More">more_vert</mat-icon>
+        </div>
+      </div>
+      <div class="">
+        <div *ngFor="let user of user_replics">
+          <div [ngClass]='user.chat == "you" ? "left" : "right"'>
+            <img [src]='user.chat == "you" ? your_source : user_source' alt="image">
+            <span>{{user.replic}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

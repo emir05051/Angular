@@ -1,0 +1,134 @@
+.main{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.navbar{
+  color: white;
+  width: 250px;
+  background-color: #283144;
+}
+.logo{
+  background-color: #222939;
+  padding: 15px;
+}
+.logo a {
+  font-size: 30px;
+  text-decoration: none;
+  color: white;
+  margin-left: 10px;
+  font-weight: bold;
+}
+.logo_markup{
+  display: flex;
+  flex-direction: column;
+}
+.logo_markup .logo_img{
+  border-radius: 50%;
+  width: 80px;
+  align-self: center;
+  margin-top: 10px;
+}
+.logo_markup h4{
+  margin-bottom: 0;
+}
+.logo_markup h5{
+  color: #7f848d;
+}
+.logo_markup h4,.logo_markup h5{
+  align-self: center;
+}
+.user_logos{
+  align-self: center;
+}
+.user_logos img {
+  margin-left:5px;
+  cursor: pointer;
+  width: 18px;
+}
+
+.navbar_list{
+  display: flex;
+  flex-direction: column;
+  margin: 0px 0px 0 -10px;
+}
+
+.searchbar{
+  display: flex;
+  width: 100%;
+  height: 50px;
+  justify-content: space-between;
+  box-shadow: 0 2px 1px -1px #0003, 0 1px 1px #00000024, 0 1px 3px #0000001f;
+  align-items: center;
+}
+.searchbar input {
+  margin: 0px 0px 0 10px;
+  height: 30px;
+  width: 50%;
+  border-radius: 10px;
+  border: none;
+  background-color: whitesmoke;
+  padding: 5px;
+}
+.searchbar input:hover{
+  background-color: #e0e0e0;
+}
+.elements{
+  display: flex;
+  height: 100%;
+  width: 40%;
+}
+.elements button{
+  background-color: transparent;
+  border: 1px solid #adadad;
+  width: 40%;
+  cursor: pointer;
+}
+.elements button img{
+  width: 20px;
+}
+
+.user-button{
+  display: flex;
+  align-items: center;
+}
+.user-button img{
+  width: 40px !important;
+  border-radius: 50%;
+}
+.user-button span {
+  font-weight: bolder;
+}
+
+/*Изменяю копки*/
+mat-button-toggle-group {
+  box-shadow: none;
+}
+
+mat-button-toggle {
+  background-color: transparent !important;
+  margin-top: 5px !important;
+  padding: 0 5px !important;
+  color: white;
+}
+
+mat-button-toggle:hover {
+  border: 1px #000 solid !important;
+  background-color: #242b3c !important;
+  border-bottom-right-radius: 22px;
+  border-top-right-radius: 22px;
+  border: none !important;
+}
+
+.mat-button-toggle-checked {
+  border-bottom-right-radius: 22px;
+  border-top-right-radius: 22px;
+  background-color: #1976d2 !important;
+  color: white;
+}
+.mat-button-toggle-checked:hover{
+  background-color: #1976d2 !important;
+}
+/**/
+

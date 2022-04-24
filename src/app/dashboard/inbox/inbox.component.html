@@ -1,0 +1,29 @@
+<div class="main">
+  <div class="search">
+    <div class="search_inbox">
+      <mat-icon>mail</mat-icon>
+      <h1 style="margin: 0">Inbox</h1>
+    </div>
+    <div class="searchbar">
+      <mat-icon>search</mat-icon>
+      <input type="text" placeholder="Search...">
+    </div>
+  </div>
+  <div style="display: flex; ">
+    <div class="left">
+      <mat-button-toggle-group class="inbox inbox-margin">
+        <mat-button-toggle value="primary" (click)="navigateTo('primary')">Primary</mat-button-toggle>
+        <mat-button-toggle value="social" (click)="navigateTo('social')">Social</mat-button-toggle>
+        <mat-button-toggle value="promotions" (click)="navigateTo('promotion')">Promotions</mat-button-toggle>
+        <mat-button-toggle value="starred">Starred</mat-button-toggle>
+        <mat-button-toggle value="sent Mails">Sent Mails</mat-button-toggle>
+        <mat-button-toggle value="drafts">Drafts</mat-button-toggle>
+        <mat-button-toggle value="spam">Spam</mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+    <div class="right">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+

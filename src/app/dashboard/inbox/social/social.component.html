@@ -1,0 +1,15 @@
+<div class="inbox">
+  <div class="top">
+    <mat-checkbox></mat-checkbox>
+  </div>
+  <div class="bottom">
+    <div *ngFor="let mail of emails; let i = index" class="emails">
+      <mat-checkbox></mat-checkbox>
+      <mat-icon>star_border</mat-icon>
+      <img [src]="photos[i]" alt="photo" style="width: 25px; border-radius: 50%">
+      <b style="margin-right: 9px">{{mail.name}}</b>
+      {{mail.text}}
+    </div>
+  </div>
+</div>
+<!--1 3 4 10 19-->

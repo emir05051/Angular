@@ -1,0 +1,42 @@
+<div class="main">
+  <div class="top">
+    <img src="../../assets/dashboard/rocket.svg" alt="rocket" width="80px">
+  </div>
+  <div class="bottom">
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput required>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>E-Mail</mat-label>
+      <input matInput required>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'">
+      <button mat-icon-button style="background-color: transparent; border: none" matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Password (Confirm)</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'" [value]="">
+      <button mat-icon-button style="background-color: transparent; border: none" matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+    <div class="bottom_remember">
+      <mat-checkbox>
+        I accept the <a>terms and conditions.</a>
+      </mat-checkbox>
+    </div>
+    <div class="button">
+      <button mat-raised-button color="primary" style="width: 100%; margin-top: 10px" (click)='navigateTo'>CREATE ACCOUNT</button>
+    </div>
+    <div class="create_account">
+      <span style="color: grey">Already have an account</span>
+      <a href="/login" style="color: #232729">Sign in here</a>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,13 @@
+<div class="inbox">
+  <div class="top">
+    <mat-checkbox></mat-checkbox>
+  </div>
+  <div class="bottom">
+    <div *ngFor="let mail of emails; let i = index" class="emails">
+      <mat-checkbox></mat-checkbox>
+      <mat-icon (click)="changeId(i)" [style.color]="clicked[i] ? 'yellow' : 'black'">star_border</mat-icon>
+      <b style="margin-right: 9px">{{mail.name}}</b>
+      {{mail.text}}
+    </div>
+  </div>
+</div>

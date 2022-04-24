@@ -1,0 +1,19 @@
+.main{
+  width: 100%;
+  height: calc(100vh - 50px);
+  background: rgb(34,193,195);
+  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+  display: flex;
+  flex-direction: column;
+  font-size: 50px;
+  justify-content: space-around;
+  align-items: center;
+}
+.main a{
+  color: white;
+  text-decoration: none;
+  transition: 0.4s transform;
+}
+.main a:hover{
+  transform: scale(2);
+}

@@ -1,0 +1,53 @@
+<div class="main">
+  <div class="navbar">
+    <div class="logo">
+      <div class="logo_markup">
+        <div>
+          <img src="../../assets/dashboard/rocket.svg" width="26px">
+          <a href="/dashboard/main">Fury</a>
+        </div>
+        <img src="../../assets/dashboard/people.jpg" class="logo_img">
+        <h4>NAME NAME</h4>
+        <h5>namename@gmail.com</h5>
+        <div class="user_logos">
+          <img src="../../assets/list/Table-svg.svg" (click)="navigate('dashboard/table')" alt="task">
+          <img src="../../assets/list/Calendar-svg.svg" (click)="navigate('dashboard/calendar')" alt="calendar">
+          <img src="../../assets/list/Login-svg.svg" (click)="navigate('login')" alt="join">
+        </div>
+      </div>
+    </div>
+    <div>
+      <mat-button-toggle-group #group="matButtonToggleGroup" class="navbar_list">
+        <mat-button-toggle *ngFor="let route of routes" [value]="route.viewValue" (click)="navigateTo(route.path)">
+          <img [src]="'../../assets/list/' + route.viewValue + '-svg.svg'" alt="Icon" width="20px" />
+          {{ route.viewValue }}
+        </mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+  </div>
+  <div style="width: 100%">
+    <div class="searchbar">
+      <input type="search" placeholder="Search.." />
+      <div class="elements">
+        <button class="fullscreen">
+          <img src="../../assets/search/fullscreen-open.svg">
+        </button>
+        <button class="notification">
+          <img src="../../assets/search/notification.svg">
+        </button>
+        <button class="user">
+          <div class="user-button">
+            <img src="../../assets/dashboard/people.jpg">
+            <span>David Smith</span>
+          </div>
+        </button>
+        <button class="overview">
+          <img src="../../assets/search/align-right.svg">
+        </button>
+      </div>
+    </div>
+
+    <router-outlet></router-outlet>
+
+  </div>
+</div>

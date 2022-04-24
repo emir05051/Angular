@@ -1,0 +1,16 @@
+.top{
+  width: 100%;
+  padding: 20px;
+  border-bottom: 1px solid grey;
+}
+.bottom{
+  width: 100%;
+  height: 400px;
+  overflow-y: auto;
+}
+.emails{
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid grey;
+}
